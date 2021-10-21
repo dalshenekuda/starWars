@@ -1,0 +1,98 @@
+/** @format */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Encode Sans", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+#root {
+  height: 100%;
+}
+
+.app {
+  height: 100vh;
+  background-color: antiquewhite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content {
+  background-color: aquamarine;
+  width: 80%;
+  min-height: 50%;
+}
+
+.content__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  min-height: 100px;
+}
+
+.content__list > div {
+  margin: 20px;
+}
+
+.content__list__head-font {
+  font-size: 2rem;
+  font-weight: bolder;
+  position: relative;
+  left: 0.3rem;
+}
+
+.content__list__films {
+  width: 40%;
+  background-color: #e1e3dd;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.content__details {
+  background-color: #004bad;
+}
+
+.film {
+  margin: 1rem 0;
+}
+
+.film__font {
+  font-size: 1.4rem;
+  height: 1.6rem;
+  font-weight: bold;
+  color: #353939;
+}
+
+.film__font:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.details {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #353939;
+}
+/*# sourceMappingURL=style.css.map */
