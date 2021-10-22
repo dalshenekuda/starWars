@@ -1,2 +1,2 @@
-# starWars
+# The Star Wars API
  
