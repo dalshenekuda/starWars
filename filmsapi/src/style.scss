@@ -4,64 +4,87 @@ body {
   margin: 0;
   background-color: antiquewhite;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  //font-size: 1.6rem;
   font-family: "Encode Sans", sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  monospace;
 }
 
 #root {
   height: 100%;
-  // height: 100vh;
 }
+
 h1 {
   font-size: 2.5rem;
+  color: #615755;
+  margin: 0 0.5rem;
 }
+
 .bold {
   font-weight: bold;
   color: rgb(19, 19, 19);
 }
 
+button {
+  border: none;
+  height: 3rem;
+  width: 8rem;
+  border-radius: 0.4rem;
+  background-color: #e1e3dd;
+  font-size: 1rem;
+  color: #43474b;
+  font-weight: bolder;
+  cursor: pointer;
+
+  &:hover {
+    color: #d0d0d0;
+
+    background-color: rgb(58, 74, 114);
+  }
+}
+
 .app {
-  padding-top: 7%;
+  padding: 3% 0;
   background-color: antiquewhite;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // align-content: center;
+  align-content: center;
 }
 
 .content {
-  // background-color: aquamarine;
-  border: 1px#000000;
+  border: 1px #000000;
   width: 80%;
   min-height: 50%;
   max-width: 1400px;
   border-radius: 0.5rem;
 
-  //display: flex;
-  //flex-direction: column;
-  //flex-wrap: nowrap;
-  //justify-content: center;
-  //align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 
-  &__list {
+  justify-content: center;
+  align-items: center;
+
+
+  &__box {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    width: 100%;
     min-height: 100px;
+    margin-bottom: 2rem;
 
     & > div {
-      margin: 14px;
+      margin: 0.8rem;
     }
 
     &__head-font {
@@ -69,19 +92,20 @@ h1 {
       font-weight: bolder;
       position: relative;
       left: 0.3rem;
-      //margin-bottom: 3rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+      letter-spacing: 0.2rem;
+      color: #131313;
     }
 
-    &__films {
-      width: 40%;
+    &__list {
       background-color: #e1e3dd;
-      padding: 0.5rem 1rem;
       border-radius: 1rem;
+      padding: 0.5rem 1rem;
     }
 
-    &__details {
+    &__list-details {
       background-color: #a5bad4;
-      width: 60%;
       padding: 1rem 1rem;
       border-radius: 1rem;
     }
@@ -92,24 +116,104 @@ h1 {
   margin: 1rem 0;
 
   &__font {
+    padding: 0.11rem 0.3rem;
+    background-color: rgba(117, 117, 117, 0.09);
+    border-radius: 0.5rem;
     font-size: 1.4rem;
     height: 1.6rem;
     font-weight: bold;
-    color: #5f6666;
+    color: #353838;
+
     &:hover {
-      color: #000000;
+      color: #9c7631;
       cursor: pointer;
     }
   }
 }
+
 .details {
   font-size: 1.2rem;
   font-weight: normal;
   color: #353939;
+
   & > * {
     margin-bottom: 0.5rem;
   }
+
   &__font {
     display: block;
+  }
+
+  &__add-elements {
+    display: flex;
+    align-items: center;
+
+    & > * {
+      margin-right: 1rem;
+    }
+
+    &__text {
+      color: #0c5099;
+    }
+  }
+}
+
+.favorites-box {
+  width: 50%;
+}
+
+.width40 {
+  width: 40%;
+}
+
+.width60 {
+  width: 60%;
+}
+
+.red {
+  background-color: darksalmon;
+}
+//media
+
+@media (max-width: 667px) {
+  .content {
+    width: 96%;
+
+    &__box {
+      margin-bottom: 1rem;
+
+      & > div {
+        margin: 0.2rem;
+      }
+
+      &__list {
+        padding: 0.2rem 0.4rem;
+      }
+
+      &__head-font {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+      }
+    }
+  }
+  .film {
+    margin: 0.6rem 0;
+
+    &__font {
+      padding: 0.11rem 0.1rem;
+      font-size: 0.8rem;
+    }
+  }
+  .details {
+    font-size: 0.8rem;
+
+    &__add-elements {
+      font-size: 0.7rem;
+    }
+  }
+  button {
+    font-size: 0.6rem;
+    height: 1.7rem;
+    width: 5.5rem;
   }
 }
